@@ -1,0 +1,6 @@
+{
+  "name": "CS Seminars Philippines Finder",
+  "description": "An interactive search and directory platform for MMCL Computer Science students to discover real-world CS, IT, and software engineering seminars, conferences, and webinars in the Philippines categorized by participation format and outreach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
