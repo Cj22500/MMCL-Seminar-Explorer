@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 
+dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 dotenv.config();
 
 const app = express();
@@ -161,7 +162,7 @@ app.post("/api/seminars/search", async (req, res) => {
     const ai = getGeminiClient();
     
     // Formulate a robust search-grounding prompt
-    const promptMessage = `Search the internet for currently active, upcoming, or recent (2024 to 2026) real Computer Science, Software Engineering, cybersecurity, AI, or Information Technology related seminars, conferences, webinars, meetups, or workshops in the Philippines.
+    const promptMessage = `Search the internet (including platforms like lu.ma, eventbrite.com, meetup.com, Facebook Events, and official university or tech community portals) for currently active, upcoming, or recent (2024 to 2026) real Computer Science, Software Engineering, cybersecurity, AI, or Information Technology related seminars, conferences, webinars, meetups, or workshops in the Philippines.
 The specific request/theme is: "${query}".
 
 Follow these strict constraints:
