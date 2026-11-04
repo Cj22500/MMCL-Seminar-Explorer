@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# MMCL Seminar Explorer - AI-Powered Tech & CS Event Discovery Platform
 
-# Run and deploy your AI Studio app
+A full-stack seminar and developer conference discovery application built for Computer Science students at Mapua Malayan Colleges Laguna (MMCL), powered by **React 19**, **TypeScript**, **Tailwind CSS v4**, **Node.js / Express (`server.ts`)**, and the **Google Gemini API (`@google/genai`)**.
 
-This contains everything you need to run your app locally.
+## Key Features
+- **AI-Powered Seminar Discovery & Grounded Search (`server.ts`)**: Uses the Google Gemini API (`@google/genai`) with structured JSON schema output (`Type.OBJECT` / `Type.ARRAY`) to discover, categorize, and summarize local (Philippine) and international Computer Science conferences, hackathons, and workshops.
+- **Curated Fallback & Resilience**: Built-in curated seminar dataset (e.g., DEVCON Summit Philippines, PyCon PH, Google I/O Extended) with automatic graceful fallback when offline or rate-limited.
+- **Interactive Filtering & Topic Tagging**: Filter events by modality (`onsite`, `online`, `hybrid`), scale (`local`, `international`), and technical domain (`AI`, `Cloud Native`, `Cybersecurity`, `Web/Mobile`).
 
-View your app in AI Studio: https://ai.studio/apps/e1f3c3df-630b-4b42-9d76-e7f107b050f1
+## Tech Stack
+- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Vite, Motion, Lucide React
+- **Backend**: Node.js, Express (`server.ts`), `@google/genai`
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
+## Local Setup
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Add your `GEMINI_API_KEY` to `.env.local` (or run without a key to use simulated curated search):
+   ```bash
+   npm run dev
+   ```
